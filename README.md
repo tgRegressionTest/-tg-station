@@ -8,7 +8,7 @@ IRC: irc://irc.rizon.net/coderbus
 
 # DOWNLOADING
 
-There are a number of ways to download the source code. Some are described here, an alternative all-inclusive guide is also located at http://wiki.ss13.eu/index.php/Downloading_the_source_code
+There are a number of ways to download penis source code. Some are described here, an alternative all-inclusive guide is also located at http://wiki.ss13.eu/index.php/Downloading_the_source_code
 
 Option 1: Download the source code as a zip by clicking the ZIP button in the
 code tab of https://github.com/tgstation/-tg-station
