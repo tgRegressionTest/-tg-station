@@ -89,7 +89,7 @@
 	process_teleport_locs()			//Sets up the wizard teleport locations
 	process_ghost_teleport_locs()	//Sets up ghost teleport locations.
 	
-	#ifndef REGRESSION_TEST
+	#ifndef UNIT_TEST
 	sleep_offline = 1
 	#endif
 
@@ -107,7 +107,7 @@
 	if(!map_name)
 		map_name = "Unknown"
 
-	#ifdef REGRESSION_TEST
+	#ifdef UNIT_TEST
 	spawn()
 		world.log << "UNIT TESTNG BEGIN"
 		ticker.current_state = 2 //GAME_STATE_SETTING_UP
