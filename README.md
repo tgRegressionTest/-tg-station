@@ -5,7 +5,7 @@ Website: http://ss13.eu
 Code: https://github.com/tgstation/-tg-station
 
 IRC: irc://irc.rizon.net/coderbus
-
+STOP BULLYING ME MRPERSON
 # DOWNLOADING
 
 There are a number of ways to download penis source code. Some are described here, an alternative all-inclusive guide is also located at http://wiki.ss13.eu/index.php/Downloading_the_source_code
