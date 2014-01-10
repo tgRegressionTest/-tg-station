@@ -104,6 +104,17 @@
 	if(!map_name)
 		map_name = "Unknown"
 
+	#ifdef REGRESSION_TEST
+	spawn()
+		world.log << "regression testing begin"
+		sleep_offline = 0
+		ticker.current_state = 2 //GAME_STATE_SETTING_UP
+		sleep(10)
+		regression_testing()
+		world.log << "regression testing end"
+		sleep_offline = 1
+	#endif
+
 	spawn(3000)		//so we aren't adding to the round-start lag
 		if(config.kick_inactive)
 			KickInactiveClients()
