@@ -88,7 +88,10 @@
 
 	process_teleport_locs()			//Sets up the wizard teleport locations
 	process_ghost_teleport_locs()	//Sets up ghost teleport locations.
+	
+	#ifdef REGRESSION_TEST
 	sleep_offline = 1
+	#endif
 
 	var/list/lines = file2list(file('tgstation.dme'))
 	for(var/l in lines)
@@ -106,13 +109,12 @@
 
 	#ifdef REGRESSION_TEST
 	spawn()
-		world.log << "regression testing begin"
-		sleep_offline = 0
+		world.log << "UNIT TESTNG BEGIN"
 		ticker.current_state = 2 //GAME_STATE_SETTING_UP
 		sleep(10)
 		regression_testing()
-		world.log << "regression testing end"
-		sleep_offline = 1
+		world.log << "UNIT TESTNG END"
+		shutdown()
 	#endif
 
 	spawn(3000)		//so we aren't adding to the round-start lag
