@@ -89,7 +89,7 @@
 	process_teleport_locs()			//Sets up the wizard teleport locations
 	process_ghost_teleport_locs()	//Sets up ghost teleport locations.
 	
-	#ifdef REGRESSION_TEST
+	#ifndef REGRESSION_TEST
 	sleep_offline = 1
 	#endif
 
