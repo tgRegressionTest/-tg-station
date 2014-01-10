@@ -25,6 +25,7 @@
 		O.owner = src
 	internal_organs += new /obj/item/organ/appendix
 	internal_organs += new /obj/item/organ/heart
+	internal_organs += new /obj/item/organ/heart
 	internal_organs += new /obj/item/organ/brain
 
 	for(var/i=0;i<7;i++) // 2 for medHUDs and 5 for secHUDs
