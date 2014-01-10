@@ -1,3 +1,4 @@
+WHATABLEARIV
 #define DEBUG					//Enables byond profiling and full runtime logs - note, this may also be defined in your .dme file
 //#define dellogging			//Enables logging of forced del() calls (used for debugging)
 //#define TESTING				//Enables in-depth debug messages to runtime log (used for debugging)
