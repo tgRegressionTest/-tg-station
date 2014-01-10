@@ -28,6 +28,8 @@
 	internal_organs += new /obj/item/organ/heart
 	internal_organs += new /obj/item/organ/brain
 
+	adjustToxLoss(200) //timelords need to die before they can live!!!!!111!!
+
 	for(var/i=0;i<7;i++) // 2 for medHUDs and 5 for secHUDs
 		hud_list += image('icons/mob/hud.dmi', src, "hudunknown")
 
