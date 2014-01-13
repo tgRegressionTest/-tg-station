@@ -1,5 +1,4 @@
-#pretending we're C because otherwise ruby/rvm will initialize, even with "language: dm".
-language: c
+language: dm
 
 env:
   BYOND_MAJOR="503"

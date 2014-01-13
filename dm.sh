@@ -1,6 +1,7 @@
 #!/bin/bash
 
 dmepath=""
+retval=1
 
 for var
 do
@@ -31,20 +32,31 @@ fi
 
 for var
 do
+	arg=`echo $var | sed -r 's/^.{2}//'`
 	if [[ $var == -D* ]]
 	then
-		define=`echo $var | sed -r 's/^.{2}//'`
-		sed -i '1s/^/#define '$define'\n/' $dmepath.mdme
+		sed -i '1s/^/#define '$arg'\n/' $dmepath.mdme
+		continue
+	fi
+	if [[ $var == -M* ]]
+	then
+		sed -i 's!// BEGIN_INCLUDE!// BEGIN_INCLUDE\n#include "_maps\\'$arg'.dm"!' $dmepath.mdme
+		continue
 	fi
 done
 
 if [[ `uname` == MINGW* ]]
 then
 	dm.exe $dmepath.mdme
+	retval=$?
 else
 	DreamMaker $dmepath.mdme
+	retval=$?
 fi
+
 mv $dmepath.mdme.dmb $dmepath.dmb
 mv $dmepath.mdme.rsc $dmepath.rsc
 
 rm $dmepath.mdme
+
+exit $retval

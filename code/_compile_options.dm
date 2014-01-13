@@ -54,6 +54,10 @@ var/list/del_counter = list()
 #warn compiling in TESTING mode. testing() debug messages will be visible.
 #endif
 
+#ifdef AUTO_TEST
+#warn automatic testing mode enabled, server will shut down automatically when testing is complete.
+#endif
+
 //SYSTEM TOGGLES - these allow you to compile the game without some of the laggier systems if your server cannot cope with demand
 /* Not yet coded
 #define USE_DYNAMIC_GRAVITY		//Enables the dynamic gravity system
