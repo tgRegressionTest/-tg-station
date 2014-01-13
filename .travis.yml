@@ -22,4 +22,4 @@ script:
   - ./dm.sh $PROJNAME.dme -DAUTO_TEST
   - DreamDaemon $PROJNAME.dmb
   - cat test_results.log
-  - ! grep -q FAIL test_results.log
+  - (! grep -q FAIL test_results.log)
