@@ -1,6 +1,7 @@
 #!/bin/bash
 
 dmepath=""
+retval=1
 
 for var
 do
@@ -31,20 +32,58 @@ fi
 
 for var
 do
+	arg=`echo $var | sed -r 's/^.{2}//'`
 	if [[ $var == -D* ]]
 	then
-		define=`echo $var | sed -r 's/^.{2}//'`
-		sed -i '1s/^/#define '$define'\n/' $dmepath.mdme
+		sed -i '1s/^/#define '$arg'\n/' $dmepath.mdme
+		continue
+	fi
+	if [[ $var == -M* ]]
+	then
+		sed -i '1s/^/#define MAP_OVERRIDE\n/' $dmepath.mdme
+		sed -i 's!// BEGIN_INCLUDE!// BEGIN_INCLUDE\n#include "_maps\\'$arg'.dm"!' $dmepath.mdme
+		continue
 	fi
 done
 
+#windows
 if [[ `uname` == MINGW* ]]
 then
-	dm.exe $dmepath.mdme
+	dm=""
+	
+	if hash dm.exe 2>/dev/null
+	then
+		dm='dm.exe'
+	elif [[ -a '/c/Program Files (x86)/BYOND/bin/dm.exe' ]]
+	then
+		dm='/c/Program Files (x86)/BYOND/bin/dm.exe'
+	elif [[ -a '/c/Program Files/BYOND/bin/dm.exe' ]]
+	then
+		dm='/c/Program Files/BYOND/bin/dm.exe'
+	fi
+	
+	if [[ $dm == "" ]]
+	then
+		echo "Couldn't find the DreamMaker executable, aborting."
+		exit 3
+	fi
+	
+	"$dm" $dmepath.mdme
+	retval=$?
 else
-	DreamMaker $dmepath.mdme
+	if hash DreamMaker 2>/dev/null
+	then
+		DreamMaker $dmepath.mdme
+		retval=$?
+	else
+		echo "Couldn't find the DreamMaker executable, aborting."
+		exit 3
+	fi
 fi
+
 mv $dmepath.mdme.dmb $dmepath.dmb
 mv $dmepath.mdme.rsc $dmepath.rsc
 
 rm $dmepath.mdme
+
+exit $retval
