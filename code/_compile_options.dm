@@ -9,6 +9,10 @@
 								1 to use the default behaviour;
 								2 for preloading absolutely everything;
 								*/
+
+#define BACKGROUND_ENABLED 0    // The default value for all uses of set background. Set background can cause gradual lag and is recommended you only turn this on if necessary.
+								// 1 will enable set background. 0 will disable set background.
+
 //ADMIN STUFF
 #define ROUNDSTART_LOGOUT_REPORT_TIME	6000 //Amount of time (in deciseconds) after the rounds starts, that the player disconnect report is issued.
 
@@ -52,6 +56,10 @@ var/list/del_counter = list()
 
 #ifdef TESTING
 #warn compiling in TESTING mode. testing() debug messages will be visible.
+#endif
+
+#ifdef AUTO_TEST
+#warn compiling with automatic testing enabled. the server will automatically shut down when testing is complete.
 #endif
 
 //SYSTEM TOGGLES - these allow you to compile the game without some of the laggier systems if your server cannot cope with demand
