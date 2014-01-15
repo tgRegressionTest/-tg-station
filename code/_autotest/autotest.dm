@@ -1,25 +1,26 @@
 #ifdef AUTO_TEST
 
-/auto_test
-	var/testing = ""
-	var/logfile = null
-
-/auto_test/proc/pass(var/comment)
-	logfile << "PASS: [testing][comment ? " - [comment]" : ""]"
-	return
-
-/auto_test/proc/fail(var/comment)
-	logfile << "FAIL: [testing][comment ? " - [comment]" : ""]"
-	return
+/var/running_tests = 0
 
 /proc/runAutoTests()
-	var/auto_test/tester = new
+	if(MAP_FILE != "autotestmap.dmm")
+		CRASH("Wrong map compiled in for automatic testing.  Did you compile with -Mautotestmap?")
 
-	tester.logfile = file("test_results.log")
+	var/logfile = file("test_results.log")
 
-	for(var/p in typesof(/auto_test/proc))
+	for(var/p in typesof(/auto_tester/proc))
 		if(findtext("[p]", "proc/test_"))
-			tester.testing = "[p]"
-			call(tester, p)()
+			var/auto_tester/tester = new
+			tester.logfile = logfile
+			tester.current = "[p]"
+			running_tests++
+			spawn
+				call(tester, p)()
+				running_tests--
+
+	while(running_tests > 0)
+		sleep(20) //wait a bit, then check again.
+
+	return
 
 #endif

@@ -16,7 +16,8 @@ install:
   - chmod +x dm.sh
 
 script:
-  - ./dm.sh $PROJNAME.dme -DAUTO_TEST
-  - DreamDaemon $PROJNAME.dmb
+  - ./dm.sh $PROJNAME.dme -DAUTO_TEST -Mautotestmap
+  - DreamDaemon $PROJNAME.dmb 2>&1 | tee runtimes.log
+  - (! grep -q 'runtime error' runtimes.log)
   - cat test_results.log
   - (! grep -q FAIL test_results.log)

@@ -1,3 +1,6 @@
+/proc/getLandmark(tag)
+	return get_turf(locate("landmark*[tag]"))
+
 /obj/effect/landmark
 	name = "landmark"
 	icon = 'icons/mob/screen_gen.dmi'

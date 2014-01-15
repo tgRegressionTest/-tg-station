@@ -1,0 +1,43 @@
+"a" = (/turf/simulated/wall/r_wall,/area/admin)
+"b" = (/turf/simulated/floor,/area/admin)
+"c" = (/obj/effect/landmark{name = "test_life_safe"},/turf/simulated/floor,/area/admin)
+"d" = (/obj/structure/grille,/obj/structure/window/reinforced{tag = "icon-rwindow (EAST)"; icon_state = "rwindow"; dir = 4},/obj/structure/window/reinforced{tag = "icon-rwindow (WEST)"; icon_state = "rwindow"; dir = 8},/obj/structure/window/reinforced{tag = "icon-rwindow (NORTH)"; icon_state = "rwindow"; dir = 1},/obj/effect/landmark{name = "test_air_check2"},/turf/simulated/floor,/area/admin)
+"e" = (/turf/space,/area/admin)
+"f" = (/obj/effect/landmark{name = "test_air_check1"},/turf/simulated/floor,/area/admin)
+"g" = (/obj/effect/landmark{name = "test_air_del"},/obj/structure/grille,/obj/structure/window/reinforced{tag = "icon-rwindow (EAST)"; icon_state = "rwindow"; dir = 4},/obj/structure/window/reinforced{tag = "icon-rwindow (WEST)"; icon_state = "rwindow"; dir = 8},/turf/simulated/floor,/area/admin)
+"h" = (/obj/structure/grille,/obj/structure/window/reinforced{tag = "icon-rwindow (EAST)"; icon_state = "rwindow"; dir = 4},/obj/structure/window/reinforced{tag = "icon-rwindow (WEST)"; icon_state = "rwindow"; dir = 8},/obj/structure/window/reinforced,/turf/simulated/floor,/area/admin)
+
+(1,1,1) = {"
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+abbbbbbbbbbbbbbbbbbbbbbbbbbbbbba
+abbbbbbbbbbbbbbbbbbbbbbbbbbbbbba
+abbbbbbbbbbbbbbbbbbbbbbbbbbbbbba
+abbbbbbbbbbbbbbbbbbbbbbbbbbbbbba
+abbbbbbbbbbbbbbbbbbbbbbbbbbbbbba
+abbbbbbbbbbbbbbbbbbbbbbbbbbbbbba
+abbbbbbbbbbbbbbbbbbbbbbbbbbbbbba
+abbbbbbbbbbbbbbbbbbbbbbbbbbbbbba
+abbbbbbbbbbbbbbbbbbbbbbbbbbbbbba
+abbbbbbbbbbbbbbbbbbbbbbbbbbbbbba
+abbbbbbbbbbbbbbbbbbbbbbbbbbbbbba
+abbbbbbbbbbbbbbbbbbbbbbbbbbbbbba
+abbbbbbbbbbbbbbbbbbbbbbbbbbbbbba
+abbbbbbbbbbbbbbbbbbbbbbbbbbbbbba
+abbbbbbbbbbbbbbbbbbbbbbbbbbbbbba
+abbbbbbbbbbbbbbbbbbbbbbbbbbbbbba
+abbbbbbbbbbbbbbbbbbbbbbbbbbbbbba
+abbbbbbbbbbbbbbbbbbbbbbbbbbbbbba
+abbbbbbbbbbbbbbbbbbbbbbbbbbbbbba
+abbbbbbbbbbbbbbbbbbbbbbbbbbbbbba
+abbbbbbbbbbbbbbbbbbbbbbbbbbbbbba
+abbbbbbbbbbbbbbbbbbbbbbbbbbbbbba
+aaaaabbbbbbbbbbbbbbbbbbbbbbbbbba
+abbbabbbbbbbbbbbbbbbbbbbbbbbbbba
+abcbabbbbbbbbbbbbbbbbbbbbbbbbbba
+abbbabbbbbbbbbbbbbbbbbbbbbbbbbba
+aaaaaaaaabbbbbbbbbbbbbbbbbbbbbba
+abbbdeeeabbbbbbbbbbbbbbbbbbbbbba
+abfbgeeeabbbbbbbbbbbbbbbbbbbbbba
+abbbheeeabbbbbbbbbbbbbbbbbbbbbba
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+"}
