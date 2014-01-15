@@ -305,7 +305,7 @@
 
 /obj/structure/window/Del(quiet)
 	density = 0
-	air_update_turf(1)
+	// air_update_turf(1) //lol break
 	if(!quiet)playsound(src, "shatter", 70, 1)
 	update_nearby_icons()
 	loc = null //garbage collect
