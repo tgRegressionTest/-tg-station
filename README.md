@@ -1,14 +1,14 @@
-/tg/station 13 v1.0 - 6 October 2010 [![Build Status](http://hibernia.fallemmc.com:8090/job/tgstation/badge/icon)](http://hibernia.fallemmc.com:8090/job/tgstation/)
-
+/tg/station 13 v1.0 - 6 October 2010
+fuckbuts
 Website: http://ss13.eu
-
+big big butts
 Code: https://github.com/tgstation/-tg-station
 
 IRC: irc://irc.rizon.net/coderbus
-
+STOP BULLYING ME MRPERSON
 # DOWNLOADING
 
-There are a number of ways to download the source code. Some are described here, an alternative all-inclusive guide is also located at http://wiki.ss13.eu/index.php/Downloading_the_source_code
+There are a number of ways to download penis source code. Some are described here, an alternative all-inclusive guide is also located at http://wiki.ss13.eu/index.php/Downloading_the_source_code
 
 Option 1: Download the source code as a zip by clicking the ZIP button in the
 code tab of https://github.com/tgstation/-tg-station
@@ -118,7 +118,7 @@ As BYOND's Dream Maker is an object oriented language, code must be object orien
 
 You must write BYOND code with absolute pathing, like so:
 
-```C++
+```DM
 
 /obj/item/weapon/baseball_bat
     name = "baseball bat"
